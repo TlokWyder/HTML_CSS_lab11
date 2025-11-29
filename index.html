@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Elara Vance: A Retrospective (1995–2060)</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <main>
+        <header id="main-header">
+            <nav>
+                <ul>
+                    <li><a href="#about" title="Перейти к биографии">Обо мне</a></li>
+                    <li><a href="#publications" title="Посмотреть список работ">Публикации</a></li>
+                    <li><a href="#awards" title="Посмотреть награды">Награды</a></li>
+                    <li><a href="#contact" title="Связаться с профессором">Контакты</a></li>
+                </ul>
+            </nav>
+            <h1>Dr. Elara Vance: A Retrospective (1995–2060)</h1>
+            <h2>Профессор Эмеритус, Директор Центра Этической Интеллектуальной Автономии</h2>
+        </header>
+
+        <section id="about">
+            <h3>Биография и Философия</h3>
+            <hr> <figure class="profile-figure">
+                <img src="assets/images/prof-vance.jpg" alt="Портрет доктора Элары Вэнс, 60 лет" class="float-img">
+                <figcaption>Профессор Вэнс, 2060 г.</figcaption>
+            </figure>
+
+            <p>
+                Dr. Элара Вэнс (1995 г.р.) — пионер в области **Этичного Искусственного Интеллекта** и <span class="entity">&laquo;</span>Квантовых Нейросетей<span class="entity">&raquo;</span>. Ее карьера охватывает 40 лет новаторских исследований, сосредоточенных на обеспечении безопасности и справедливости автономных систем. [cite_start]Она всегда подчеркивала: <em>«Технология должна служить человечеству, а не доминировать над ним»</em>[cite: 3].
+            </p>
+            <div class="clear-float"></div> <h4>Основные Этапы Карьеры (1995–2060)</h4>
+            <ol>
+                <li><p>Основание Лаборатории Надежного ИИ в MIT (2030 г.).</p></li>
+                <li><p>Запуск первого этически-нейтрального автономного городского транспорта (2045 г.).</p></li>
+                <li><p>Получение Премии Тьюринга (2052 г.).</p></li>
+                <li><p>Выход на пенсию и назначение Профессором Эмеритус (2060 г.).</p> <time datetime="2060-12-31"></time></li>
+            </ol>
+
+            <details>
+                <summary>Подробнее о философии «Квантовых Нейросетей»</summary>
+                <p>
+                    Этот подход использовал принципы квантовой запутанности для создания более устойчивых и непредвзятых моделей принятия решений. Опубликовано в Nature, 2040 г.
+                </p>
+            </details>
+        </section>
+
+        <section id="publications">
+            <h3>Избранные Публикации</h3>
+            <hr>
+
+            <table>
+                <caption>Наиболее цитируемые работы (Top 5)</caption>
+                <thead>
+                    <tr>
+                        <th>Год</th>
+                        <th>Название (h6)</th> <th>Журнал/Конференция</th>
+                        <th>Ссылка</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <article>
+                        <tr>
+                            <td data-label="Год">2040</td>
+                            <td data-label="Название"><h6>The Quantum Entanglement of Autonomous Ethics</h6></td>
+                            <td data-label="Журнал">Nature AI</td>
+                            <td data-label="Ссылка"><a href="#" target="_blank">Читать</a></td>
+                        </tr>
+                    </article>
+                    <article>
+                        <tr>
+                            <td data-label="Год">2050</td>
+                            <td data-label="Название"><h6>Bias Reduction via Stochastic Decoupling</h6></td>
+                            <td data-label="Журнал">ICML</td>
+                            <td data-label="Ссылка"><a href="#" target="_blank">Читать</a></td>
+                        </tr>
+                    </article>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="awards">
+            <h3>Ключевые Награды</h3>
+            <hr>
+            <ul>
+                <li class="award-item">Премия Тьюринга (2052) за вклад в этичную автономию.</li>
+                <li class="award-item">Медаль Джона фон Неймана (2048) за теорию Квантовых Нейросетей.</li>
+                <li class="award-item">Звание "Человек Года" по версии Time (2053).</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h3>Запрос на Лекцию или Консультацию</h3>
+            <hr>
+            <form action="#" method="POST">
+                <label for="name">Ваше Имя:</label>
+                <input type="text" id="name" name="user_name" required autofocus>
+
+                <label for="email">Ваш Email:</label>
+                <input type="email" id="email" name="user_email" required>
+
+                <label for="org-url">Сайт Вашей Организации:</label>
+                <input type="url" id="org-url" name="org_url" placeholder="https://example.com">
+
+                <label for="topic">Интересующая тема:</label>
+                <input list="topics" id="topic" name="lecture_topic" placeholder="Выберите или введите тему">
+                <datalist id="topics">
+                    <option value="Будущее Квантового ИИ"></option>
+                    <option value="Этика и Автономные Системы"></option>
+                    <option value="Революция в Нейросетях"></option>
+                </datalist>
+
+                <label for="message">Ваше Сообщение:</label>
+                <textarea id="message" name="user_message" rows="5" required></textarea>
+
+                <button type="submit" class="btn-primary">Отправить Запрос</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2060 Dr. Elara Vance. <span class="entity">&mdash;</span> Разработано с использованием чистого HTML и CSS.
+        </p>
+    </footer>
+</body>
+</html>
