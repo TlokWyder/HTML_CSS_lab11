@@ -1,183 +1,247 @@
-/* =====================================
-   CSS: Использование селекторов по тегам
-   ===================================== */
-body {
-    font-family: 'Georgia', serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f9;
-    /* Использование margin для центрирования */
+
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: #1a1a1a;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+
+:root {
+    --primary-color: #c89f7b;     
+    --secondary-color: #e3c9aa;    
+    --accent-color: #b36b4a;       
+    --text-color: #3b3027;         
+    --bg-color: #f6efe7;          
+    --white: #ffffff;
+    --gray-light: #e4d6c8;        
+    --gray-dark: #7b6350;          
+    --shadow: 0 2px 10px rgba(77, 52, 34, 0.12);
+    --shadow-hover: 0 8px 24px rgba(77, 52, 34, 0.18);
+    --transition: all 0.3s ease;
 }
 
-p {
-    margin-bottom: 1em;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
 }
 
-a {
-    color: #006699;
-    text-decoration: none;
-    transition: color 0.3s;
-}
 
-a:hover {
-    color: #0099cc;
-    text-decoration: underline;
-}
 
-hr {
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1.5em 0;
-}
-
-/* =====================================
-   CSS: Использование ID селектора
-   ===================================== */
-#main-header {
-    background: #006699;
-    color: white;
-    /* Использование padding */
-    padding: 20px;
-    text-align: center;
-    /* Использование border-bottom */
-    border-bottom: 5px solid #ffcc00;
-}
-
-/* =====================================
-   CSS: Display, Position, Float, Clear
-   ===================================== */
-nav ul {
-    list-style: none;
-    padding: 0;
-    /* Использование display: flex */
+header {
     display: flex;
-    justify-content: center;
-    background: #1a1a1a;
-    /* Использование position: sticky */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    padding: 5em;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
 }
 
-nav li {
-    /* Использование display: inline-block */
-    /* display: inline-block; */
-    /* Используем flex для навигации */
-    margin: 0 15px;
+main{
+    padding: 4em;
+    align-items: center;
+    align-self: center;
 }
 
-nav a {
-    color: white;
-    display: block;
-    padding: 10px 15px;
-    text-transform: uppercase;
+
+.heritage-link{
+    margin: 2.5em 0;
+    padding: 1.5em 2em;
+    border: 1px dashed rgba(59, 48, 39, 0.35);
+    border-radius: 1em;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.05);
+    text-align: center;
 }
 
-.float-img {
-    /* Использование float: left */
-    float: left;
-    width: 200px;
-    height: auto;
-    /* Использование margin и border */
-    margin-right: 25px;
-    margin-bottom: 15px;
-    border: 5px solid #ffcc00;
-    border-radius: 5px;
+.heritage-link p{
+    font-size: 1.2em;
+    margin-bottom: 0.8em;
+    color: var(--gray-dark);
 }
 
-.clear-float {
-    /* Использование clear: both */
-    clear: both;
+.heritage-link__btn{
+    display: inline-flex;
+    padding: 0.75em 1.8em;
+    border-radius: 999px;
+    background: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* =====================================
-   CSS: Использование class селектора
-   ===================================== */
-section {
-    max-width: 1000px;
-    /* Использование margin для центрирования */
-    margin: 40px auto;
-    /* Использование padding */
-    padding: 20px 30px;
-    background: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+.heritage-link__btn:hover{
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
 }
 
-/* Стили для формы */
-form label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
+
+.site-footer{
+    margin-top: 4em;
+    background: linear-gradient(135deg, var(--primary-color), #a87f5c);
+    color: var(--white);
+    padding: 3em 0;
 }
 
-form input[type="text"],
-form input[type="email"],
-form input[type="url"],
-form textarea {
-    width: 100%;
-    padding: 10px;
-    /* Использование border */
-    border: 1px solid #ccc;
-    box-sizing: border-box; /* Важно для корректного padding/border */
-    /* Использование margin */
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border-radius: 4px;
+
+.footer-content {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5em;
+    align-items: center;
 }
 
-.btn-primary {
-    background-color: #ffcc00;
-    color: #1a1a1a;
-    /* Использование padding */
-    padding: 10px 20px;
-    /* Использование border */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.footer-content p{
+    flex: 1 1 auto;
     font-size: 1.1em;
-    transition: background-color 0.3s;
+    color: var(--white);
+    margin: 0;
 }
 
-.btn-primary:hover {
-    background-color: #e6b800;
+.footer-content a{
+    color: var(--white);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
 }
 
-/* Стили для таблицы (table) */
-table {
+.footer-content a:hover{
+    opacity: 0.7;
+}
+
+.img_heder{
+    width: 15em;
+    height: 15em;
+    border: 0.5em solid #ffffff;
+    border-radius: 50%;
+    background-image: url("resours/img/ME_DED.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.Anvar_self_content{
+    color: var(--text-color);
+    margin: 3em;
+}
+
+
+.table-wrapper{
+    margin-top: 3em;
+    background: var(--white);
+    border-radius: 1.5em;
+    padding: 2.5em;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(59, 48, 39, 0.08);
+    overflow-x: auto;
+}
+
+
+.career-table{
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    min-width: 640px;
+    font-size: 1rem;
 }
 
-table th, table td {
-    /* Использование padding и border */
-    padding: 12px 15px;
-    border: 1px solid #ddd;
+
+.career-table thead{
+    position: sticky;
+    top: 0;
+    background: linear-gradient(120deg, var(--secondary-color), var(--primary-color));
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.85em;
+}
+
+
+.career-table th,
+.career-table td{
+    padding: 1.2em 1.4em;
     text-align: left;
+    border-bottom: 1px solid rgba(59, 48, 39, 0.08);
 }
 
-table th {
-    background-color: #f2f2f2;
-    font-weight: bold;
+
+.career-table tbody tr{
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: rgba(248, 243, 237, 0.6);
 }
 
-/* Стилизация подвала */
-footer {
-    background: #1a1a1a;
-    color: #999;
-    text-align: center;
-    /* Использование padding */
-    padding: 15px 0;
-    /* Использование margin */
-    margin-top: 40px;
-    font-size: 0.9em;
+.career-table tbody tr:nth-child(even){
+    background-color: rgba(231, 220, 209, 0.35);
+}
+
+.career-table tbody tr:hover{
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+    background-color: var(--white);
+}
+
+.career-table td:first-child{
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.career-table td:nth-child(3){
+    font-weight: 600;
+}
+
+.career-table td:last-child{
+    color: rgba(59, 48, 39, 0.9);
+}
+
+
+
+.footer-copy p{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+
+.footer-copy a{
+    display: inline-block;
+    margin-top: 0.5em;
+    font-weight: 600;
+}
+
+
+.footer-social{
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.footer-social a{
+    width: 3.2em;
+    height: 3.2em;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(6px);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+}
+
+
+.footer-social img{
+    width: 1.6em;
+    height: 1.6em;
+    object-fit: contain;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
